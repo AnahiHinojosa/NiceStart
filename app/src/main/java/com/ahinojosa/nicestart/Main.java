@@ -52,23 +52,20 @@ public class Main extends AppCompatActivity {
             return insets;
         });
     }
-    /*public void showAlertDialogButtonClicked (Main main) {
+    public void showAlertDialogButtonClicked (Main main) {
 
         // setup the alert builder
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
 
-//        //el dialogo estandar tiene título/icono pero podemos sustituirlo por un XML a medida
-        builder.setTitle("Achtung!");
+        builder.setTitle("Auch!");
         builder.setMessage("Where do you go?");
         builder.setIcon(R.drawable.user);
         builder.setCancelable(false);
 
-        // add the buttons
         builder.setPositiveButton("Scrolling", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                // do something like...
-                Intent intent = new Intent(Main.this, Login.class);
+         Intent intent = new Intent(Main.this, Login.class);
                 startActivity(intent);
                 dialog.dismiss();
 
@@ -79,8 +76,6 @@ public class Main extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                // do something like...
-
                 dialog.dismiss();
             }
         });
@@ -88,10 +83,6 @@ public class Main extends AppCompatActivity {
         builder.setNeutralButton("Other", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
-                // do something like...
-                System.exit(0);
-
                 dialog.dismiss();
             }
         });
@@ -100,7 +91,7 @@ public class Main extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
-*/
+
     protected SwipeRefreshLayout.OnRefreshListener
         mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
         @Override
@@ -131,7 +122,7 @@ public class Main extends AppCompatActivity {
          int id = item.getItemId();
 
          if (id == R.id.item1) {
-//            showAlertDialogButtonClicked(Main.this);
+
 
              Toast toast = Toast.makeText(this, "Infecting", Toast.LENGTH_LONG);
              toast.show();
@@ -140,6 +131,9 @@ public class Main extends AppCompatActivity {
          if (id == R.id.item2) {
              Toast toast = Toast.makeText(this, "Fixing", Toast.LENGTH_LONG);
              toast.show();
+         }
+         if (id == R.id.item5) {
+             showAlertDialogButtonClicked(Main.this);
          }
          return super.onOptionsItemSelected(item);
      }

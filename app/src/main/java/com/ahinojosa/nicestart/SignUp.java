@@ -24,7 +24,8 @@ public class SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
 
-        ImageView mBoy = findViewById(R.id.boy);
+       /*
+       ImageView mBoy = findViewById(R.id.boy);
 
        Glide.with(this)
               .load(R.drawable.img)
@@ -37,7 +38,7 @@ public class SignUp extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-        });
+        });*/
     }
 
     public void returnLogin(View view) {

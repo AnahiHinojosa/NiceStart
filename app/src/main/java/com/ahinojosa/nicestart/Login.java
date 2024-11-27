@@ -23,7 +23,7 @@ public class Login extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
-
+/*
         ImageView mGirl = findViewById(R.id.girl);
 
         Glide.with(this)
@@ -37,7 +37,7 @@ public class Login extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-        });
+        });*/
     }
 
     public void openSignup(View view) {

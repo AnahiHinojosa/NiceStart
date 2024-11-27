@@ -8,7 +8,7 @@
     android:background="@color/rosa_pas"
     tools:context=".Login">
 
-    <ImageView
+    <!--<ImageView
         android:id="@+id/girl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,8 +18,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         >
-        <!--android:src="@drawable/girl"-->
-    </ImageView>
+        &lt;!&ndash;android:src="@drawable/girl"&ndash;&gt;
+    </ImageView>-->
 
     <ImageView
         android:id="@+id/logo"

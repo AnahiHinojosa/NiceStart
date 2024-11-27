@@ -9,7 +9,8 @@ Ahora cuenta con dos actividades más el **Profile** y el **Splash**.
 
 Ahora al abrir la aplicación nos saldrá el Activity Splash, ya que la animación principal de la aplicación.
 ### SPLASH:
-![SPLASH_ACTIVITY]()
+![SPLASH_ACTIVITY](img/Splash1.png)
+![SPLASH_ACTIVITY](img/Splash.png)
 Cuenta con tres animaciones,dos para el icono de la app y uno para el texto y el icono.
 La primera es de de zoom, es la que tiene el texto y el icono.
 
@@ -48,7 +49,7 @@ Estas animaciones generan que la ventana de apertura de la app sea más dinámic
 
 ### LOGIN:
 
-![LOGIN_ACTIVITY](img/Login.png)
+![LOGIN_ACTIVITY](img/Login1.png)
 
 Se consigue relacionar con **SignUp** mediante el siguiente código:
 
@@ -91,7 +92,7 @@ También se relacionan **Login** y **Main** por un codigo similar :
 
 ### SIGN UP:
 
-![SIGNUP_ACTIVITY](img/SignUp.png)
+![SIGNUP_ACTIVITY](img/SignUp1.png)
 
 El SignUp cuenta con dos botones, *Confirm* y *Cancel* .El primero te mandara al **Main** y el segundo al **Login**
 El código es el siguiente:
@@ -130,4 +131,8 @@ El código es el siguiente:
 
 ### MAIN:
 
-![MAIN_ACTIVITY](img/Main.png)
+![MAIN_ACTIVITY](img/Main1.png)
+![MAIN_ACTIVITY](img/Main2.png)
+Hemos creado un WebView y tambien implementamos un ActionBar y que tras presionar la última opcion te saldra un AlertDialogBuilder.
+Si seleccionas Scrolling volveras al Login.
+
