@@ -3,33 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/rosa_pas"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp"
-    android:background="@drawable/gradient">
+    tools:context=".SignUp">
 
     <ImageView
         android:id="@+id/boy"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/img"
         android:scaleType="fitStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
+        <!--android:src="@drawable/img"-->
     </ImageView>
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="129dp"
-        android:layout_height="129dp"
-        android:layout_marginTop="48dp"
-        android:src="@drawable/ic_icono_foreground"
-        app:layout_constraintEnd_toEndOf="@id/main"
-        app:layout_constraintStart_toStartOf="@id/main"
-        app:layout_constraintTop_toTopOf="@id/main">
 
-    </ImageView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/logo"
+        android:layout_width="218dp"
+        android:layout_height="204dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/boy"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/starts_animation" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/name"
         android:layout_width="0dp"
@@ -45,13 +47,15 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:text="Name"/>
+            android:paddingStart="40dp"
+            android:hint="Name" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password"
         android:layout_width="0dp"
+        android:layout_marginTop="15dp"
         android:layout_height="wrap_content"
         app:startIconDrawable="@drawable/password"
         app:layout_constraintStart_toStartOf="@id/guideline4"
@@ -65,7 +69,8 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:text="Password"/>
+            android:paddingStart="40dp"
+            android:hint="Password"/>
 
 
 
@@ -74,6 +79,8 @@
         android:id="@+id/email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+
         app:startIconDrawable="@drawable/email"
         app:layout_constraintStart_toStartOf="@id/guideline4"
         app:layout_constraintEnd_toEndOf="@id/guideline5"
@@ -85,7 +92,8 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:text="Email"/>
+            android:paddingStart="40dp"
+            android:hint="Email"/>
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -96,6 +104,8 @@
         android:text="CONFIRM"
         app:cornerRadius="0dp"
         android:onClick="returnMain"
+        android:layout_marginTop="25dp"
+
         app:layout_constraintEnd_toEndOf="@id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toBottomOf="@id/email"
@@ -106,7 +116,7 @@
 
     <Button
         android:id="@+id/cancelar"
-        android:text="CANCEL"
+        android:text="@string/cancel"
         android:onClick="returnLogin"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="@id/guideline5"

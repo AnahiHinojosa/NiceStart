@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@color/rosa_pas"
     tools:context=".Login">
 
     <ImageView
@@ -13,11 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitStart"
-        android:src="@drawable/girl"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <!--android:src="@drawable/girl"-->
     </ImageView>
 
     <ImageView
@@ -48,7 +49,8 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:text="Username"/>
+            android:paddingStart="40dp"
+            android:hint="Username"/>
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -69,7 +71,8 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:text="Password"/>
+            android:paddingStart="40dp"
+            android:hint="Password"/>
 
 
     </com.google.android.material.textfield.TextInputLayout>
