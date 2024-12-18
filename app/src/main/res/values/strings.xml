@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">NiceStart</string>
-    <string name="click">CLICK</string>
+    <string name="click" translatable="false">CLICK</string>
     <string name="holamundo">HolaMundo!</string>
     <string name="username">USERNAME</string>
     <string name="cancel">CANCEL</string>
+    <string name="profile">PROFILE</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login" translatable="false">LOGIN</string>
+    <string name="sign_up" translatable="false">SIGN UP</string>
 </resources>

@@ -26,6 +26,7 @@
         android:layout_width="129dp"
         android:layout_height="129dp"
         android:layout_marginTop="48dp"
+        android:contentDescription="TODO"
         android:src="@drawable/ic_icono_foreground"
         app:layout_constraintEnd_toEndOf="@id/main"
         app:layout_constraintStart_toStartOf="@id/main"
@@ -72,7 +73,7 @@
             android:alpha="0.6"
             android:background="@color/white"
             android:paddingStart="40dp"
-            android:hint="Password"/>
+            android:hint="@string/password"/>
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -80,7 +81,7 @@
 
     <Button
         android:id="@+id/login"
-        android:text="LOGIN"
+        android:text="@string/login"
         android:onClick="openMain"
         app:cornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="@id/guideline5"
@@ -93,7 +94,7 @@
 
     <Button
         android:id="@+id/signup"
-        android:text="SIGN UP"
+        android:text="@string/sign_up"
         android:onClick="openSignup"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="@id/guideline5"
