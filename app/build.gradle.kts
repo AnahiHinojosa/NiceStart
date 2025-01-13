@@ -38,6 +38,7 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
     implementation(libs.swiperefreshlayout)
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
     testImplementation(libs.junit)
