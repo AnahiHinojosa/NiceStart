@@ -41,7 +41,9 @@
             android:src="@drawable/ajuste"
             app:fabSize="normal"
             app:layout_anchor="@+id/bottom_app_bar"
-            app:tint="@android:color/white"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+            app:tint="@android:color/white">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

@@ -15,5 +15,11 @@
         android:icon="@drawable/key"
         app:showAsAction="ifRoom"
         />
+    <item
+        android:id="@+id/se"
+        android:title="ho"
+        android:icon="@drawable/ajuste"
+        app:showAsAction="ifRoom"
+        />
 
 </menu>
