@@ -48,7 +48,7 @@ public class MainBab extends AppCompatActivity {
                 if (id == R.id.heart) {
                     Toast.makeText(MainBab.this, "Added to favourites", Toast.LENGTH_SHORT).show();
                 }
-                if(id == R.id.search) {
+                if(id == R.id.lenguaje) {
                     Toast.makeText(MainBab.this, "Beginning search", Toast.LENGTH_SHORT).show();
                 }
 
