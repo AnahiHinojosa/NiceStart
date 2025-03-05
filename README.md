@@ -5,7 +5,7 @@
 En este repositorio se manejan dos ramas la *master* y la *hotflix*. Y ahora cuenta con 5 actividades.
 
 Las tres actividades anteriores eran el **Login**, el **Sign Up** y el **Main**.
-Ahora cuenta con dos actividades más el **Profile** y el **Splash**.
+Ahora cuenta con 4 actividades más el **Profile**, el **MainBab**, el **MainBn** y el **Splash**.
 
 Ahora al abrir la aplicación nos saldrá el Activity Splash, ya que la animación principal de la aplicación.
 ### SPLASH:
@@ -136,9 +136,9 @@ El código es el siguiente:
 Hemos creado un WebView y tambien implementamos un ActionBar y que tras presionar la última opcion te saldra un AlertDialogBuilder.
 Si seleccionas Scrolling volveras al Login.
 
-### MAINBAR :
-![MAINBAR_ACTIVITY](img/MainBar.jpg)
-Hemos creado un activity donde se implementa un ActionBar y se ve la dinamica, para ello implementamos este codigo en el xml :
+### MAINBAB :
+![MAINBAB_ACTIVITY](img/MainBar.jpg)
+Hemos creado un activity donde se implementa un ActionBab con su bottomBar que es un boton en el centro con una funcion en especifico y se ve la dinamica, para ello implementamos este codigo en el *activity_main_bab.xml* :
         
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/bottom_app_bar"
@@ -163,7 +163,7 @@ Hemos creado un activity donde se implementa un ActionBar y se ve la dinamica, p
 
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-Y en el java :
+Y en el *MainBab.java* :
 
         BottomAppBar bottomAppBar = findViewById(R.id.bottom_app_bar);
         FloatingActionButton myfab = findViewById(R.id.fab);
@@ -183,20 +183,31 @@ Y en el java :
                 int id = item.getItemId();
 
                 if (id == R.id.heart) {
-                    Toast.makeText(MainBab.this, "Added to favourites", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainBab.this,"Added to favourites",Toast.LENGTH_SHORT).show();
                 }
                 if(id == R.id.lenguaje) {
-                    Toast.makeText(MainBab.this, "Beginning search", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainBab.this,"Beginning search",Toast.LENGTH_SHORT).show();
                 }
-
                 return false;
             }
         });
 
 ### MAINBN: 
 ![MAINBN_ACTIVITY](img/MainBn.jpg)
+Tambien se implemento un MainBn en donde solo hay un actionbar y esta hecha con fragments, por lo que al presionar en las items del menu te cambia de fragment,
+dependiendo de la item seleccionada.
+Para ello se crearon 4 fragments y una clase java extra llamada SectionPageAdapter que tiene :
 
-
-
-
+        public Fragment getItem(int position) {
+            switch (position){
+                case 0:
+                    return new Page1();
+                case 1:
+                    return new Page2();
+                case 2:
+                    return new Page4();
+                default:
+                    return null;
+            }
+        }
 
