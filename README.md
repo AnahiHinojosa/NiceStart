@@ -136,6 +136,67 @@ El código es el siguiente:
 Hemos creado un WebView y tambien implementamos un ActionBar y que tras presionar la última opcion te saldra un AlertDialogBuilder.
 Si seleccionas Scrolling volveras al Login.
 
-### PROFILE:
-Se crea un perfil para que se almacenen los datos del usuario
+### MAINBAR :
+![MAINBAR_ACTIVITY](img/MainBar.jpg)
+Hemos creado un activity donde se implementa un ActionBar y se ve la dinamica, para ello implementamos este codigo en el xml :
+        
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_gravity="bottom"
+            app:fabAlignmentMode="center"
+            app:fabAnchorMode="cradle"
+            app:fabCradleMargin="10dp"
+            app:menu="@menu/bottom_app_bar_menu"
+            app:navigationIcon="@drawable/baseline_add_24" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/fucsia_200"
+            android:src="@drawable/ajuste"
+            app:fabSize="normal"
+            app:layout_anchor="@+id/bottom_app_bar"
+            app:tint="@android:color/white">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+Y en el java :
+
+        BottomAppBar bottomAppBar = findViewById(R.id.bottom_app_bar);
+        FloatingActionButton myfab = findViewById(R.id.fab);
+        myfab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainBab.this,"Fab Clicked",Toast.LENGTH_SHORT).show();}
+        });
+        bottomAppBar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainBab.this,"Menu clicked",Toast.LENGTH_SHORT).show();}
+        });
+        bottomAppBar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                int id = item.getItemId();
+
+                if (id == R.id.heart) {
+                    Toast.makeText(MainBab.this, "Added to favourites", Toast.LENGTH_SHORT).show();
+                }
+                if(id == R.id.lenguaje) {
+                    Toast.makeText(MainBab.this, "Beginning search", Toast.LENGTH_SHORT).show();
+                }
+
+                return false;
+            }
+        });
+
+### MAINBN: 
+![MAINBN_ACTIVITY](img/MainBn.jpg)
+
+
+
+
 

@@ -28,8 +28,8 @@
         app:layout_constraintEnd_toEndOf="@id/main"
         app:layout_constraintStart_toStartOf="@id/main"
         app:layout_constraintTop_toTopOf="@id/main">
-
     </ImageView>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/name"
         android:layout_width="0dp"
@@ -48,8 +48,8 @@
             android:paddingStart="40dp"
             android:hint="@string/name" />
 
-
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password"
         android:layout_width="0dp"
@@ -59,7 +59,6 @@
         app:layout_constraintStart_toStartOf="@id/guideline4"
         app:layout_constraintEnd_toEndOf="@id/guideline5"
         app:layout_constraintTop_toBottomOf="@id/name"
-
         app:passwordToggleEnabled="true"
         >
         <EditText
@@ -70,15 +69,13 @@
             android:paddingStart="40dp"
             android:hint="@string/password"/>
 
-
-
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-
         app:startIconDrawable="@drawable/email"
         app:layout_constraintStart_toStartOf="@id/guideline4"
         app:layout_constraintEnd_toEndOf="@id/guideline5"
@@ -93,9 +90,7 @@
             android:paddingStart="40dp"
             android:hint="@string/email"/>
 
-
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <Button
         android:id="@+id/confirm"
@@ -103,14 +98,11 @@
         app:cornerRadius="0dp"
         android:onClick="returnMain"
         android:layout_marginTop="25dp"
-
         app:layout_constraintEnd_toEndOf="@id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toBottomOf="@id/email"
         style="@style/ButtonFlat">
-
     </Button>
-
 
     <Button
         android:id="@+id/cancelar"
@@ -121,7 +113,6 @@
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toBottomOf="@id/confirm"
         style="@style/buttonStyle">
-
     </Button>
 
     <androidx.constraintlayout.widget.Guideline
@@ -137,7 +128,5 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.9" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

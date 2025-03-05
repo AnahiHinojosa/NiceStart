@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">NiceStart</string>
     <string name="holamundo">hi World</string>
+    <string name="informaci_n">information</string>
 </resources>
