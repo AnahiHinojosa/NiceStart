@@ -136,3 +136,6 @@ El código es el siguiente:
 Hemos creado un WebView y tambien implementamos un ActionBar y que tras presionar la última opcion te saldra un AlertDialogBuilder.
 Si seleccionas Scrolling volveras al Login.
 
+### PROFILE:
+Se crea un perfil para que se almacenen los datos del usuario
+
