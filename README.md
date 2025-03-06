@@ -211,3 +211,38 @@ Para ello se crearon 4 fragments y una clase java extra llamada SectionPageAdapt
             }
         }
 
+Para cambiar de fragment cuando se cambie en la item que seleccionas.
+En el .java de los fragments no hay nada más que lo que tenía por predeterminado.
+Luego el código que utilizamos para que el actionbn se muestre en el activity es :
+
+    BottomNavigationMenuView bottomNavigationMenuView =
+    (BottomNavigationMenuView) mybottomNavView.getChildAt(0);
+
+Para seleccionar un item:
+
+    mybottomNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        if (item.getItemId() ==R.id.heart ) {
+            item.setChecked(true);
+            Toast.makeText(MainBn.this, "Likes clicked.", Toast.LENGTH_SHORT).show();
+            removeBadge(mybottomNavView, item.getItemId());
+            viewPager.setCurrentItem(0);
+        }
+
+Y asi con cada una de los items que tengas para seleccionar.
+
+Tambien se ha añadido la opcion de modo oscuro y tiene los activity en land.
+Para hacer el modo oscuro se crea otro colors de tipo night y se ponen los mismos nombres. Asi se veria :
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <color name="black">#444444</color>
+        <color name="white">#9E9E9E</color>
+        <color name="fucsia_200">#81323F</color>
+        <color name="teal_700">#422873</color>
+        <color name="rosa_pas">#C06888</color>
+    </resources>
+
+Para crear los land simplemente le das a la opcion que aparece y te crea un nuevo xml en formato land
